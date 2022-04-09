@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="30dp"
+    tools:context=".AlarmIntent">
+
+    <TextView
+        android:id="@+id/tvIntentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="54dp"
+        android:gravity="center_horizontal"
+        android:text="Label"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvIntentDesp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvIntentTitle"
+        android:layout_marginTop="29dp"
+        android:gravity="center_horizontal"
+        android:text="Description"
+        android:textColor="@color/grey"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvIntentTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvIntentDesp"
+        android:layout_marginTop="26dp"
+        android:gravity="center_horizontal"
+        android:text="Date and Time"
+        android:textColor="@color/grey"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvIntentRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvIntentTime"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="Repeat"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/tvIntentClockImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvIntentRepeat"
+        android:layout_marginTop="19dp"
+        android:padding="100dp"
+        app:srcCompat="@drawable/active_alarm_icon" />
+</RelativeLayout>

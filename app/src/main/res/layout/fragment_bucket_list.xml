@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".BucketList">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/tvShortHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="19dp"
+                android:shadowColor="@color/grey"
+                android:text="Short Term Goals"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivShortVisible"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="19dp"
+                android:layout_toEndOf="@+id/tvShortHeading"
+                android:clickable="true"
+                app:srcCompat="@drawable/open_arrow" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvShortHeading"
+                android:layout_marginTop="15dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tvShortEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvShort"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="19dp"
+                android:gravity="center_horizontal"
+                android:padding="20dp"
+                android:text="You don't have any Short Term Goals yet! Click on the blue button at the bottom right corner of the screen to set your goals."
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/tvLongHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvShortEmpty"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="19dp"
+                android:shadowColor="@color/grey"
+                android:text="Long Term Goals"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivLongVisible"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tvShortEmpty"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="19dp"
+                android:layout_toEndOf="@+id/tvLongHeading"
+                android:clickable="true"
+                app:srcCompat="@drawable/open_arrow" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLongHeading"
+                android:layout_marginTop="15dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tvLongEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvLong"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="19dp"
+                android:gravity="center_horizontal"
+                android:padding="20dp"
+                android:text="You don't have any Long Term Goals yet! Click on the blue button at the bottom right corner of the screen to set your goals."
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="29dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/add_note_fab_icon"
+        app:tint="@color/white" />
+
+</RelativeLayout>

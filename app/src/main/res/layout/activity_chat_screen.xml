@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cc_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ChatScreen">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_screen_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        app:layout_dodgeInsetEdges="bottom">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="@color/black"
+        app:cardElevation="6dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_dodgeInsetEdges="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_dodgeInsetEdges="bottom">
+
+            <EditText
+                android:id="@+id/etInputMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_weight="10"
+                android:background="@drawable/input_box"
+                android:ems="10"
+                android:hint="@string/type_here"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textPersonName"
+                android:maxHeight="300dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
+
+            <ImageView
+                android:id="@+id/btnSendMessage"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:layout_weight="3"
+                android:clickable="true"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                app:layout_dodgeInsetEdges="bottom"
+                app:srcCompat="@drawable/send_message" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
